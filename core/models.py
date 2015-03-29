@@ -1,6 +1,8 @@
 
 from django.db import models
 
+from .querysets import TodoQuerySet
+
 
 class Todo(models.Model):
 
@@ -8,6 +10,8 @@ class Todo(models.Model):
     done = models.BooleanField(db_index=True, default=False)
 
     owner = models.ForeignKey('auth.User')
+
+    objects = TodoQuerySet.as_manager()
 
     class Meta:
         verbose_name = "Todo"

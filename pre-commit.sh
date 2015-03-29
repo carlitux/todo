@@ -17,7 +17,7 @@ git stash -q --keep-index
 # Ignoramos E501 que habla de la longitud de linea
 # ya poseemos pantallas que manejan mayor cantidad
 # de caracteres así que no es necesario Django también las ignora.
-pep8 --show-source --statistics --ignore=E501 .
+pep8 --show-source --statistics --ignore=E501,E402 .
 PEP8_RESULT=$?
 # Corremos los tests y vemos si cumple el el mínimo requerido
 python manage.py test

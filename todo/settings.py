@@ -90,6 +90,6 @@ STATIC_URL = '/static/'
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 NOSE_ARGS = [
     '--with-coverage',  # activamos coverage
-    '--cover-min-percentage=0',  # porcentaje minimo de coverage
+    '--cover-min-percentage=80',  # porcentaje minimo de coverage
     '--cover-package=core',  # llamaremos core a la aplicacion principal (Solo ASCII)
 ]

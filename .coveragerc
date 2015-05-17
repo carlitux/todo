@@ -1,0 +1,9 @@
+[run]
+omit = *migrations*.py
+timid = True
+
+[report]
+exclude_lines =
+	pragma: no cover
+	from*
+	import*
